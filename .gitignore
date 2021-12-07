@@ -2,3 +2,5 @@ data/
 .Rhistory
 .Rbuildignore
 .Rproj.user
+.Rproj.user/
+.DS_Store
