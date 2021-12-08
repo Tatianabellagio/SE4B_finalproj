@@ -1,27 +1,19 @@
-# 1.
-install.packages("MCMC.qpcr")
+# this should be install autmaticalley?
+library(devtools)
 library(MCMC.qpcr)
+## if i add this this package should be installed automaticalley right?
+use_package("MCMC.qpcr")
+# read in data
+data_ <- read.csv(file="../finalproject/analysis/data/raw_data/Nowicki_C_SPP_Males_data_ESM.csv",
+                 stringsAsFactors = TRUE,
+                 colClasses=c("count"="numeric"))
 
-# 2. read in data
-# changed stringsAsFactors = TRUE; in R 4.x the default was changed to FALSE -GP
-# this script was written before R 4.x was released - GP
-data <- read.csv(file="Nowicki_C_SPP_Males_data_ESM.csv", stringsAsFactors = TRUE)
-data$count <- as.numeric(data$count) # force counts to be numeric
-head(data) # allows you to view your data to ensure it was imported correctly
-levels(data$sex) # shows you all levels of the sex factor, to sanity check the data set looks correct
+# 3. sub-set data into different brain regions and store them in separate data
+# frames, in order to analyze each brain region separately
+#levels(data$region_mammal) #shows names of brain region levels
 
-# 3. sub-set data into different brain regions and store them in separate data frames, in order to analyze each brain region separately
-levels(data$region_mammal) #shows names of brain region levels
-Hipp=subset(data, region_mammal=="Hipp") #makes a dataframe for Hipp
-blAMY=subset(data, region_mammal=="blAMY")
-LS=subset(data, region_mammal=="LS")
-meAMY.BNST=subset(data, region_mammal=="meAMY.BNST")
-NAcc=subset(data, region_mammal=="NAcc")
-POA=subset(data, region_mammal=="POA")
-Str.CP=subset(data, region_mammal=="Str.CP")
-VTA=subset(data, region_mammal=="VTA")
-
-
+subsets = split(data, data$region_mammal)
+list2env(subsets, envir = .GlobalEnv)
 
 # 4. model fitting
 # had to change variable to factor -GP
@@ -29,7 +21,8 @@ meAMY.BNST$species = relevel(factor(meAMY.BNST$species), ref='C.bar') #sets C.ba
 meAMY.BNST_naive_model=mcmc.qpcr(data=meAMY.BNST, fixed="species", random =
                                    "individual", nitt=510000,thin=500,burnin=10000, pr=TRUE)
 summary(meAMY.BNST_naive_model) # this shows results from 1-way fixed effects
-meAMY.BNST_HPDsumm_naive_model=HPDsummary(meAMY.BNST_naive_model,meAMY.BNST, relative=T) #eyeballametrically determine whether there are global effects.
+meAMY.BNST_HPDsumm_naive_model=HPDsummary(meAMY.BNST_naive_model,meAMY.BNST, relative=T)
+#eyeballametrically determine whether there are global effects.
 
 # 5. decision time
 ## if no global effects are present in naive model, try sharpening credible inervals by running an "informed" model instead.
