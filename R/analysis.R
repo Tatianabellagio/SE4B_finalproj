@@ -1,8 +1,5 @@
-library(devtools)
-
-create_package("~/Documents/soft_e_forbio/final_project_")
 # 1.
-#install.packages("MCMC.qpcr")
+install.packages("MCMC.qpcr")
 library(MCMC.qpcr)
 
 # 2. read in data
@@ -56,10 +53,9 @@ MeAMY.BNST_spp_informed_pwp$summary # retrieves bundles of data that can be used
 MeAMY.BNST_spp_informed_pwp$geneWise # calculates pairwise difference between treatments and their statistical significances; upper triangle is log fold changes, lower triangle is the corresponding p-values
 
 #capitalized meAMY.BNST_informed_model here -GP
+
 # 7. plot results
-
 spp_order<-c("C.vag", "C.lun", "C.bar", "C.trif", "C.rainf", "C.pleb")
-
 plot_meAMY.BNST_informed=HPDsummary(MeAMY.BNST_informed_model,meAMY.BNST,xgroup="species", x.order=spp_order) # trellis plot of all genes in same panel
 trellisByGene(plot_meAMY.BNST_informed, xFactor="species", groupFactor =
                 "species")+xlab("species") # trellis plots of genes in separate panels
