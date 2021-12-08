@@ -11,20 +11,24 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 # Please put your title here to include it in the file below.
-Title <- "Title of your paper goes here"
+Title <- "buttRflyfish: reproduction of figure 2B from Nowicki et al. 2020"
 ```
 
-# finalproject
+# buttRflyfish
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Tatianabellagio/SE4B_finalproj/master?urlpath=rstudio)
 
-This repository contains the data and code for our paper:
+This repository contains the data and code for our package `buttRflyfish`, which replicates the central plot in Figure 2B from [Nowicki et al. 2020: "Gene expression correlates of social evolution in coral reef buttefly fishes"](https://dx.doi.org/10.1098%2Frspb.2020.0239). The authors use a Markov Chain Monte Carlo model to analyze qRT-PCR data for neuropeptide expression in different brain regions of social butterfly fish using the package `MCMC.qpcr`. Figure 2B illustrates that fish homologue of mammalian oxytocin receptor (OTR) is downregulated in the of supracommisural part of the ventral telencephalon in solitary butterfly fish species.
+
+```{r}
+#include code once functions are ironed out
+```
 
 > Authors, (YYYY). _`r Title`_. Name of journal/book <https://doi.org/xxx/xxx>
 
-Our pre-print is online here:
+<!-- Our pre-print is online here: -->
 
-> Authors, (YYYY). _`r Title`_. Name of journal/book, Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
+<!-- > Authors, (YYYY). _`r Title`_. Name of journal/book, Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx> -->
 
 
 ### How to cite
