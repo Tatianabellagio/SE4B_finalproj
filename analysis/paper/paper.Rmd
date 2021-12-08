@@ -52,7 +52,7 @@ knitr::opts_chunk$set(
   dpi = 300
 )
 
-if (file.exists("analysis/data/raw_data/Nowicki_C_SPP_Males_data_ESM.csv")) {
+if (!file.exists("analysis/data/raw_data/Nowicki_C_SPP_Males_data_ESM.csv")) {
   stop("Data not found: Do to analysis/data/raw_data and run getData.R")
 }
 ```
