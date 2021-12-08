@@ -1,4 +1,5 @@
-data/
+analysis/data/raw_data/Nowicki_C_SPP_Males_data_ESM.csv
 .Rhistory
 .Rbuildignore
-.Rproj.user
+.Rproj.user/
+.DS_Store
