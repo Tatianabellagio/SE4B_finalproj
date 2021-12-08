@@ -1,4 +1,4 @@
-data/
+analysis/data/raw_data
 .Rhistory
 .Rbuildignore
 .Rproj.user
