@@ -1,4 +1,5 @@
 #' Run model
+#'
 #' This function run an MCMC model in qpcr
 #' @param data
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/load_data.R
 \name{load_data}
 \alias{load_data}
-\title{function to load the data}
+\title{Load data}
 \usage{
 load_data()
 }
@@ -10,5 +10,5 @@ load_data()
 
 }
 \description{
-function to load the data
+Function to load the Qpcr data (gene expression) of the butterfly fish
 }

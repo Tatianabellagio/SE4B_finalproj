@@ -2,7 +2,7 @@
 % Please edit documentation in R/run_model.R
 \name{run_model}
 \alias{run_model}
-\title{run model}
+\title{Run model}
 \usage{
 run_model(data)
 }
@@ -13,5 +13,5 @@ run_model(data)
 
 }
 \description{
-run model
+This function run an MCMC model in qpcr
 }
