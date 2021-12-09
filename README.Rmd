@@ -11,14 +11,14 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 # Please put your title here to include it in the file below.
-Title <- "Title of your paper goes here"
+Title <- "buttRflyfish: reproduction of figure 2b from Nowicki et al. 2020"
 ```
 
-# finalproject
+# buttRflyfish
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Tatianabellagio/SE4B_finalproj/master?urlpath=rstudio)
 
-This repository contains the data and code for our paper:
+This repository contains the data and code for our package `buttRflyfish`, which will reproduce figure 2b from [Nowicki et al. 2020](https://doi.org/10.1098/rspb.2020.0239):
 
 > Authors, (YYYY). _`r Title`_. Name of journal/book <https://doi.org/xxx/xxx>
 
