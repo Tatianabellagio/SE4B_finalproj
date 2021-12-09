@@ -1,5 +1,5 @@
 #' plot otr expression
-#'
+#' It is showing downregulation of OTR in the supracocmissural part of the ventral telencephalo in solitary species
 #' @param model
 #' @param data
 #'

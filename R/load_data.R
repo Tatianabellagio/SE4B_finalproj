@@ -1,5 +1,5 @@
-#' function to load the data
-#'
+#' Load data
+#' Function to load the Qpcr data (gene expression) of the butterfly fish
 #' @return
 #' @export
 #'
