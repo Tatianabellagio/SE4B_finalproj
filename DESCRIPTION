@@ -5,11 +5,23 @@ Authors@R:
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
+Depends: 
+    R (>= 2.10)
+Imports: 
+    bookdown,
+    here,
+    MCMC.qpcr
+Suggests: 
+    devtools,
+    git2r,
+    testthat (>= 3.0.0)
 ByteCompile: true
+Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+<<<<<<< HEAD
 Imports: 
     bookdown,
     ggsignif,
@@ -19,3 +31,5 @@ Imports:
     MCMC.qpcr
 Suggests: devtools,
     git2r
+=======
+>>>>>>> e90aba0b91808cb41ac1b85aa50d065df0220def
