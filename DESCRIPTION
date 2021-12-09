@@ -7,10 +7,6 @@ Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Depends: 
     R (>= 2.10)
-Imports: 
-    bookdown,
-    here,
-    MCMC.qpcr
 Suggests: 
     devtools,
     git2r,
@@ -22,11 +18,11 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
+    here,
     bookdown,
     ggsignif,
     grid,
     gridExtra,
     here,
-    MCMC.qpcr
-Suggests: devtools,
-    git2r
+    MCMC.qpcr,
+    magrittr
