@@ -6,33 +6,24 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Tatianabellagio/SE4B_finalproj/master?urlpath=rstudio)
 
 This repository contains the data and code for our package
-`buttRflyfish`, which replicates the central plot in Figure 2B from
-[Nowicki et al. 2020: “Gene expression correlates of social evolution in
-coral reef buttefly
-fishes”](https://dx.doi.org/10.1098%2Frspb.2020.0239). The authors use a
-Markov Chain Monte Carlo model to analyze qRT-PCR data for neuropeptide
-expression in different brain regions of social butterfly fish using the
-package `MCMC.qpcr`. Figure 2B illustrates that fish homologue of
-mammalian oxytocin receptor (OTR) is downregulated in the of
-supracommisural part of the ventral telencephalon in solitary butterfly
-fish species.
+`buttRflyfish`, which will reproduce figure 2b from [Nowicki et
+al. 2020](https://doi.org/10.1098/rspb.2020.0239):
 
-``` r
-#include code once functions are ironed out
-```
-
-> Authors, (YYYY). *buttRflyfish: reproduction of figure 2B from Nowicki
+> Authors, (YYYY). *buttRflyfish: reproduction of figure 2b from Nowicki
 > et al. 2020*. Name of journal/book <https://doi.org/xxx/xxx>
 
-<!-- Our pre-print is online here: -->
-<!-- > Authors, (YYYY). _buttRflyfish: reproduction of figure 2B from Nowicki et al. 2020_. Name of journal/book, Accessed 08 Dec 2021. Online at <https://doi.org/xxx/xxx> -->
+Our pre-print is online here:
+
+> Authors, (YYYY). *buttRflyfish: reproduction of figure 2b from Nowicki
+> et al. 2020*. Name of journal/book, Accessed 09 Dec 2021. Online at
+> <https://doi.org/xxx/xxx>
 
 ### How to cite
 
 Please cite this compendium as:
 
 > Authors, (2021). *Compendium of R code and data for buttRflyfish:
-> reproduction of figure 2B from Nowicki et al. 2020*. Accessed 08 Dec
+> reproduction of figure 2b from Nowicki et al. 2020*. Accessed 09 Dec
 > 2021. Online at <https://doi.org/xxx/xxx>
 
 ## Contents
