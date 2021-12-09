@@ -1,13 +1,17 @@
-test_that("getData.R works", {
-  tmp_path <- file.path(tempdir(), 'Nowicki_C_SPP_Males_data_ESM.csv')
-  download.file("https://datadryad.org/stash/downloads/file_stream/368459",
-                tmp_path)
-  expect_true(file.exists(tmp_path))
+test_that("data has correct number of columns", {
+  "Should I do this from tmp?"
 })
 
-test_that("data has correct number of columns", {
-  tmp_path <- file.path(tempdir(), 'Nowicki_C_SPP_Males_data_ESM.csv')
-  download.file("https://datadryad.org/stash/downloads/file_stream/368459",
-                tmp_path)
-  expect_true(file.exists(tmp_path))
-})
+
+
+#have a test set for inputs and outputs to functions
+
+# -right inputs
+# - make sure there are right columns
+# - make sure there are right brain regions
+# - make sure there are the correct species
+# -make sure packages are running well
+# -make sure models are running well
+# -right outputs
+#
+# tibble check

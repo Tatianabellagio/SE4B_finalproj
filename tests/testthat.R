@@ -1,4 +1,4 @@
 library(testthat)
-library(finalproject)
+library(buttRflyfish)
 
-test_check("finalproject")
+test_check("buttRflyfish")
