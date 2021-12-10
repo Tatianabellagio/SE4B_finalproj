@@ -20,6 +20,7 @@ RoxygenNote: 7.1.2
 Imports: 
     here,
     bookdown,
+    dplyr,
     ggsignif,
     grid,
     gridExtra,

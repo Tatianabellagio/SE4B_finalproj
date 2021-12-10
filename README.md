@@ -7,16 +7,26 @@
 
 This repository contains the data and code for our package
 `buttRflyfish`, which will reproduce figure 2b from [Nowicki et
-al. 2020](https://doi.org/10.1098/rspb.2020.0239):
+al. 2020](https://doi.org/10.1098/rspb.2020.0239). The authors analyzed
+gene expression of socially-relevant neuropeptides across different
+brain regions in several butterfly fishes. Specifically, they wanted to
+characterize the neural correlates of pair-bonding versus solitary
+behavior. Figure 2b shows a significant downregulation of oxytocin
+receptor in the supracommissural part of the ventral telencephalon in
+the males of solitary butterfly fish species.
 
-> Authors, (YYYY). *buttRflyfish: reproduction of figure 2b from Nowicki
-> et al. 2020*. Name of journal/book <https://doi.org/xxx/xxx>
+# Example
 
-Our pre-print is online here:
+``` r
+library(buttRflyfish)
 
-> Authors, (YYYY). *buttRflyfish: reproduction of figure 2b from Nowicki
-> et al. 2020*. Name of journal/book, Accessed 09 Dec 2021. Online at
-> <https://doi.org/xxx/xxx>
+data = load_data() # load data
+model = run_model(data) # run MCMC model
+p = otr_expression_plot(model,data) # plot differential expression results
+```
+
+![Reproduction of figure 2b from Nowicki et
+al. 2020.](README-fig1-1.png)
 
 ### How to cite
 
@@ -24,7 +34,7 @@ Please cite this compendium as:
 
 > Authors, (2021). *Compendium of R code and data for buttRflyfish:
 > reproduction of figure 2b from Nowicki et al. 2020*. Accessed 09 Dec
-> 2021. Online at <https://doi.org/xxx/xxx>
+> 2021. Online at <https://github.com/Tatianabellagio/buttRflyfish>
 
 ## Contents
 
@@ -36,12 +46,6 @@ The **analysis** directory contains:
     `paper.docx`, suitable for reading (the code is replaced by figures
     and tables in this file)
 -   [:file\_folder: data](/analysis/data): Data used in the analysis.
--   [:file\_folder: figures](/analysis/figures): Plots and other
-    illustrations
--   [:file\_folder:
-    supplementary-materials](/analysis/supplementary-materials):
-    Supplementary materials including notes and other documents prepared
-    and collected during the analysis.
 
 ## How to run in your browser or download and run locally
 
