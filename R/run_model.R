@@ -1,6 +1,6 @@
 #' Run model
 #'
-#' This function run an MCMC model in qpcr
+#' This function runs a MCMC model to quantify differential expression of qPCR data
 #' @param data
 #'
 #' @return
