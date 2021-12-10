@@ -3,19 +3,18 @@ title: "buttRflyfish: reproduction of figure 2b from Nowicki et al. 2020"
 author:
   - Gabriel A. Preising:
       email: gpreisin@stanford.edu
-      institute: Stanford
+      institute: UofO
       correspondence: true
   - Tatiana Bellagio:
       email: tbellg@stanford.edu
-      instiftute: Stanford
+      institute: UofO
       correspondence: false
   - Sebastian ToroArana:
       email: sebatoro@stanford.edu
-      institute: Stanford
-      correspondence: true
+      institute: UofO
+      correspondence: true  
 institute:
-  - UofO: University of Stanford
-  - UofA: Biology Department
+  - UofO: Stanford University Biology Department
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
     bookdown::word_document2:
@@ -27,23 +26,7 @@ output:
       - --lua-filter=../templates/pagebreak.lua
 bibliography: references.bib
 csl: "../templates/journal-of-archaeological-science.csl" # Insert path for the bib-style
-abstract: |
-  Text of abstract
-keywords: |
-  keyword 1; keyword 2; keyword 3
-highlights: |
-  These are the highlights. 
 ---
-
-<!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
-
-<!-- With the following code you can access and display values from the yml header above. -->
-
-Keywords: `r rmarkdown::metadata$keywords`
-
-Highlights: `r rmarkdown::metadata$highlights`
-
-<!-- The following code chunk defines some general settings how code chunks should behave. -->
 
 ```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
@@ -56,26 +39,20 @@ knitr::opts_chunk$set(
   dpi = 300
 )
 
-if (!file.exists("../data/raw_data/Nowicki_C_SPP_Males_data_ESM.csv")) {
-  stop("Data not found: Go to analysis/data/raw_data and run getData.R")
-}
-
 ```
 
 <!-- The actual document text starts here: -->
 
 # Introduction
-
-This is a replication of figure 2A from [@nowicki2020]
-
-# Background
+Here, we reproduce figure 2b from [@nowicki2020] - "Gene expression correlates of social evolution in coral reef butterfly fishes". This study analyzed the neural correlates of pair-bonding vs. solitary mating behavior in several species of *Chaetodontidae* fishes. To accomplish this, they compared gene expression of socially-relevant neuropeptides in brain regions pertinent to social function. One of their main findings was that the males of pair-bonding species had elevated oxytocin receptor (OTR) expression in the supracommissural part of the ventral telencephalon (Vs) compared to the males of solitary species.
 
 # Methods
+The authors of [@nowicki2020] used qRT-PCR to quantify relative mRNA expression of OTR in Vs of 5 *Chaetodontidae* species: *C. vagabundus*, *C. lunatus*, *C. baronessa*, *C. trifascialis*, and *C. rainfordi*. They employ a Markov Chain Monte Carlo approach to analyze differential gene expression. Below is a reproduction of figure 2b using our package `buttRflyfish`.
 
 # Results
 
 <!-- Here's some example analysis code: -->
-```{r fig1, fig.cap="Reproduction of figure 2b from Nowicki et al. 2020.", echo = TRUE, results = 'hide', warning=FALSE, message = FALSE}
+```{r fig1, fig.cap="Reproduction of figure 2b from Nowicki et al. 2020.", echo = TRUE, results = 'hide', warning=FALSE, message = FALSE, fig.height=4, fig.width=4}
 library(buttRflyfish)
 
 data = load_data() # load data
@@ -83,23 +60,6 @@ model = run_model(data) # run MCMC model
 p = otr_expression_plot(model,data) # plot differential expression results
 
 ```
-Figure \@ref(fig:demo-plot) shows how we can have a caption and cross-reference for a plot
-
-```{r demo-inline-code}
-x <- round(pi, 2)
-```
-
-Here is an example of inline code `r x` in the middle of a sentence.
-
-# Discussion
-
-# Conclusion
-
-# Acknowledgements
-
-<!-- The following line inserts a page break  -->
-
-\newpage
 
 # References
 
